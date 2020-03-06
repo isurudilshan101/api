@@ -33,7 +33,19 @@ class HomeState extends State<Home>{
              margin: const EdgeInsets.all(3.0),
              alignment: Alignment.center,
              child:Column(
-               
+               children: <Widget>[
+                 TextField(
+                   controller: null,
+                   keyboardType: TextInputType.number,
+                   decoration: InputDecoration(
+                     labelText: 'Your Weight on Earth',
+                     hintText: 'In Pounds',
+                     icon: Icon(Icons.person_outline),
+                   ),
+
+                 ),
+               ],
+
              ),
            ),
          ],
