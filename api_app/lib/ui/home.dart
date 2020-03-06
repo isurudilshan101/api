@@ -28,7 +28,7 @@ class HomeState extends State<Home>{
        centerTitle: true,
        backgroundColor: Colors.black54,
      ),
-     backgroundColor: Colors.blueAccent,
+     backgroundColor: Colors.blueGrey,
      body: Container(
        alignment:Alignment.topCenter ,
        child: ListView(
@@ -59,12 +59,44 @@ class HomeState extends State<Home>{
                    children: <Widget>[
                      //radio buttons
                      Radio<int>
-                     (value: 0, groupValue: radioValue, onChanged: handleRadioValueChanged),
+                    (activeColor: Colors.brown,
+                      value: 0, groupValue: radioValue, onChanged: handleRadioValueChanged),
+
+                     Text(
+                       "Pluto",
+                       style:TextStyle(color: Colors.white30),
+                       ),
                       Radio<int>
-                     (value: 1, groupValue: radioValue , onChanged:  handleRadioValueChanged),
+                     (
+                       activeColor: Colors.red,
+                       value: 1, groupValue: radioValue , onChanged:  handleRadioValueChanged),
+                     
+                     Text(
+                       "Mars",
+                       style:TextStyle(color: Colors.white30),
+                       ),
+                       
                      Radio<int>
-                     (value: 2, groupValue: radioValue, onChanged:  handleRadioValueChanged),
+                     (   activeColor: Colors.redAccent,
+                       value: 2, groupValue: radioValue, onChanged:  handleRadioValueChanged),
+                   
+                   Text(
+                       "Venus",
+                       style:TextStyle(color: Colors.white30),
+                       ),
+
                    ],
+                 ),
+                 Padding(padding: EdgeInsets.all(15.6)),
+                //Result text
+                 Text(
+                   "Hello There",
+                   style: TextStyle(
+                     color: Colors.white,
+                     fontSize: 19.4,
+                     fontWeight: FontWeight.w500,
+
+                   ),
                  ),
                ],
 
