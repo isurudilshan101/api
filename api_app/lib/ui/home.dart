@@ -11,6 +11,15 @@ class Home extends StatefulWidget{
 
 }
 class HomeState extends State<Home>{
+  int radioValue=0;
+
+  void  handleRadioValueChanged(int value){
+    setState(() {
+      radioValue=value;
+      print(radioValue);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
    return Scaffold(
@@ -44,9 +53,22 @@ class HomeState extends State<Home>{
                    ),
 
                  ),
+                 Padding(padding: EdgeInsets.all(5.0)),
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: <Widget>[
+                     //radio buttons
+                     Radio<int>
+                     (value: 0, groupValue: radioValue, onChanged: handleRadioValueChanged),
+                      Radio<int>
+                     (value: 1, groupValue: radioValue , onChanged:  handleRadioValueChanged),
+                     Radio<int>
+                     (value: 2, groupValue: radioValue, onChanged:  handleRadioValueChanged),
+                   ],
+                 ),
                ],
 
-             ),
+             ), 
            ),
          ],
        ),
