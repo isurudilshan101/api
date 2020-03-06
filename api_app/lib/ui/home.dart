@@ -28,7 +28,14 @@ class HomeState extends State<Home>{
            Image.asset('images/planet.png',
            height:133.0,
            width: 200.0,
-           )
+           ),
+           Container(
+             margin: const EdgeInsets.all(3.0),
+             alignment: Alignment.center,
+             child:Column(
+               
+             ),
+           ),
          ],
        ),
      ),
