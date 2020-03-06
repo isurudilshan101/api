@@ -1,32 +1,9 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'ui/home.dart';
 
-void main() async
-{
-
-  String _data=await getJson();
-
-  print(_data);
-
-
-  runApp(new MaterialApp(
-    home: new Scaffold(
-      appBar:new AppBar(
-      title: new Text('JSON Parse'),
-      centerTitle:true,
-      ),
-    body:new Center(
-      child: new Text('Parsing...'),
-    ),
-    ),
-
+void main(){
+  runApp(MaterialApp(
+    title: "Weight On Planet x",
+    home:Home(),
   ));
-}
-
-Future<String>getJson() async{
-  String apiUrl='https://jsonplaceholder.typicode.com/users/1/posts';
-  http.Response response=await http.get(apiUrl);
-  return JSON.decode(response.body).toString(); 
 }
